@@ -1,2 +1,6 @@
-# Empty template Ruby on Rails 
-    Includes docker and postgres
+# Commands
+```bash
+rspec --init //create helper and rspec file
+
+rspec //search tests on spec folder
+```
