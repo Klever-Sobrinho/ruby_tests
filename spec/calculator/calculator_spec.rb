@@ -20,17 +20,20 @@ describe Calculator do
 end
 
 =begin
-  ---Peding with xit
-  xit 'with negative numbers' do
-      result = subject.sum(-5, -7)
-      expect(result).to eq(-12)
-    end
-  ---Run specific test
-  rspec spec/calculator/calculator_spec.rb
   
-  ---Run specific test by title
-  rspec spec/calculator/calculator_spec.rb -e 'with positive numbers'
+---Implicit Subject:
+    subject.sum(-5, 7)
 
-  ---Run specific test by line
-  rspec spec/calculator/calculator_spec.rb:15
-  =end
+    describe classePai do
+      describe ClasseFilha do -- subject is the more deep describe
+      end
+    end  
+
+---Explicit Subject:
+    subject(:calc) { described_class.new() }
+
+    describe Calculator, "about calculator" do
+    end  
+
+    subject(:calc) { described_class.new(1,2,3) }
+=end
