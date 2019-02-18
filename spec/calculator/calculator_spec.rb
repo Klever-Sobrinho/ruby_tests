@@ -18,9 +18,3 @@ describe Calculator do
     end
   end
 end
-
-=begin
--- each matcher can be used with expect().not_to ou expect().to  
-expect(result).not_to eq(2)
-expect(result).to eq(2)
-end
