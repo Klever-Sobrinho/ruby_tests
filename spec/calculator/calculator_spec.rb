@@ -18,28 +18,19 @@ describe Calculator do
     end
   end
 end
+
 =begin
------Example 2 (Subject)
-describe Calculator do
-
-  subject(:calc) { described_class.new }
-
-  context '#sum' do
-    it 'with positive numbers' do
-      result = calc.sum(5, 7)
-      expect(result).to eq(12)
+  ---Peding with xit
+  xit 'with negative numbers' do
+      result = subject.sum(-5, -7)
+      expect(result).to eq(-12)
     end
-end
+  ---Run specific test
+  rspec spec/calculator/calculator_spec.rb
+  
+  ---Run specific test by title
+  rspec spec/calculator/calculator_spec.rb -e 'with positive numbers'
 
-------Example 3 (Subject)
-describe 'Classe Calculadora' do
-
-  subject(:calc) { Calculator.new }
-
-  context '#sum' do
-    it 'with positive numbers' do
-      result = calc.sum(5, 7)
-      expect(result).to eq(12)
-    end
-end
-=end
+  ---Run specific test by line
+  rspec spec/calculator/calculator_spec.rb:15
+  =end
