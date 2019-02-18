@@ -20,20 +20,7 @@ describe Calculator do
 end
 
 =begin
-  
----Implicit Subject:
-    subject.sum(-5, 7)
-
-    describe classePai do
-      describe ClasseFilha do -- subject is the more deep describe
-      end
-    end  
-
----Explicit Subject:
-    subject(:calc) { described_class.new() }
-
-    describe Calculator, "about calculator" do
-    end  
-
-    subject(:calc) { described_class.new(1,2,3) }
-=end
+-- each matcher can be used with expect().not_to ou expect().to  
+expect(result).not_to eq(2)
+expect(result).to eq(2)
+end
