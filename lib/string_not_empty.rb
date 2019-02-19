@@ -1,4 +1,4 @@
-class StringNaoVazia < String
+class StringNotEmpty < String
     def initialize
         self << "Não sou vazio"
     end
