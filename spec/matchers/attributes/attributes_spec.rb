@@ -1,28 +1,38 @@
 require 'person'
 
 describe 'Attributes' do
-  config.before(:suite) do
+  before(:suite) do
     puts ">>>>>>>> Before test suite"
   end
 
-  config.after(:suite) do
+  after(:suite) do
     puts ">>>>>>>> After test suite"
   end
 
-  config.before(:context) do
+  before(:context) do
     puts ">>>>>>>> Before all tests"
   end
 
-  config.after(:all) do
+  after(:all) do
     puts ">>>>>>>> After all test"
   end
 
-  before(:each) do
+  # before(:each) do
+  #   puts "BEFORE"
+  #   @person = Person.new
+  # end
+
+  # after(:each) do
+  #   @person.name = "Without name!"
+  #   puts "AFTER>>>>>> #{@person.inspect}"
+  # end
+
+  around(:each) do |test|
     puts "BEFORE"
     @person = Person.new
-  end
 
-  after(:each) do
+    test.run # roda o teste
+
     @person.name = "Without name!"
     puts "AFTER>>>>>> #{@person.inspect}"
   end
